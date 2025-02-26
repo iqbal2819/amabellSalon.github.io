@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #ffcad4;
+}
+.container .wrap > img {
+  opacity: 0;
+  width: 500px;
+  height: auto;
+  animation: fadeRight 1s ease forwards;
+  animation-delay: 0.5s;
+  border-radius: 30px;
+  box-shadow: 3px 3px 7px black;
+  object-fit: contain;
+}
+nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  background-color: rgb(0, 0, 0);
+}
+nav h1 {
+  font-size: 30px;
+  color: white;
+  padding: 10px;
+  margin: auto;
+  .line {
+    animation: line 5s ease infinite;
+    margin: auto;
+    margin-top: 5px;
+    position: relative;
+    height: 5px;
+    border-radius: 10px;
+    background-color: white;
+    width: 300px;
+  }
+}
+nav img {
+  width: 50px;
+  background-color: white;
+  height: 50px;
+  border: 3px solid white;
+  border-radius: 20px;
+  /* mix-blend-mode: color-burn; // untuk menghapus latarbelakang */
+}
+
+nav img:hover {
+  background-color: brown;
+}
+
+.wrap {
+  align-items: center;
+  padding: 100px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+
+form {
+  background-color: white;
+  opacity: 0;
+  padding: 50px 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: 1s ease;
+  animation: fadeLeft 1s ease forwards 0.5s;
+}
+form:hover {
+  box-shadow: 3px 3px 7px black inset;
+}
+
+table {
+  text-align: center;
+  td {
+    align-items: center;
+    padding: 10px 10px;
+  }
+}
+
+input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  border-bottom: 2px solid black;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+textarea {
+  padding: 10px;
+  height: 60px;
+  font-size: 15px;
+  width: 200px;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.412);
+  transition: 0.5s ease;
+}
+textarea:focus {
+  box-shadow: 3px 3px 7px black inset;
+  border-bottom: 3px solid black;
+  border-radius: 10px 0px 0px 0px;
+}
+
+table tr td h1 {
+  padding: 30px;
+  text-align: center;
+}
+button {
+  background-color: white;
+  padding: 10px 80px;
+  border-radius: 5px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+  transition: 1s ease;
+  gap: 5px;
+  align-items: center;
+  div {
+    top: -0.5em;
+    left: -1em;
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: black;
+    transition: 0.8s ease;
+  }
+  p {
+    position: relative;
+    z-index: 1;
+    transition: 1s ease;
+  }
+}
+button > img {
+  z-index: 1;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+button:active {
+  div {
+    transition: 0.5s;
+    background-color: brown;
+  }
+}
+button:hover {
+  background-color: antiquewhite;
+  div {
+    width: 250px;
+  }
+  p {
+    color: white;
+  }
+}
+
+@media (max-width: 610px) {
+  nav {
+    width: 610px;
+  }
+  .container {
+    width: 610px;
+  }
+  .wrap {
+    flex-direction: column;
+  }
+  button {
+    transition: 0s ease;
+    div {
+      display: none;
+      transition: 0.5s ease;
+    }
+  }
+  button:active {
+    background-color: black;
+    p {
+      transition: 0s;
+    }
+  }
+}
+
+@keyframes line {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harga Salon</title>
+  </head>
+  <link rel="stylesheet" href="hargaSalon.css" />
+  <body>
+    <div class="container">
+      <nav>
+        <a href="home.html"><img src="https://cdn-icons-png.freepik.com/256/9046/9046092.png?uid=R152767568&ga=GA1.1.921051834.1728438754&semt=ais_hybrid" alt="" /> </a>
+        <h1 class="judul">
+          Daftar harga Salon
+          <div class="line"></div>
+        </h1>
+      </nav>
+      <div class="wrap">
+        <img src="./asset/daftar harga salon.jpg" alt="" />
+        <form id="form" action="#" onsubmit="sendMessage()">
+          <table>
+            <tr>
+              <td colspan="2">
+                <h1>
+                  Chat Owner
+                  <div class="line"></div>
+                </h1>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="nama">Nama </label></td>
+              <td>: <input type="text" id="nama" placeholder="Masukan Nama Anda?" /></td>
+            </tr>
+            <tr>
+              <td><label for="pesan">Masukan Pesan</label></td>
+              <td><textarea placeholder="Chat Owner disini" id="pesan"></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button type="submit">
+                  <img src="https://cdn-icons-png.freepik.com/256/3059/3059561.png?uid=R152767568&ga=GA1.1.921051834.1728438754&semt=ais_hybrid" alt="" />
+                  <p>Chat</p>
+                  <div></div>
+                </button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <!-- js -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const nama = document.getElementById("nama");
+          const pesan = document.getElementById("pesan");
+          const form = document.getElementById("form");
+          form.addEventListener("submit", () => {
+            if (nama.value == "") {
+              alert("Masukan Nama Anda");
+            } else if (pesan.value == "") {
+              alert("Masukan Pesan");
+            } else if (nama.value != "" && pesan.value != "") {
+              sendMessage();
+            }
+          });
+          function sendMessage() {
+            const urlWa = `https://wa.me/6281584877720?text=halo, nama saya ${nama.value}, pesan: ${pesan.value}`;
+            window.open(urlWa, "_blank");
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>
