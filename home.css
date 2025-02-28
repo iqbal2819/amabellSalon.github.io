@@ -4,8 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid black; */
 }
-
 /* nav bar */
 nav {
   background-color: rgb(171, 0, 68);
@@ -94,8 +94,8 @@ nav .menu-img {
 }
 
 .container {
-  overflow: hidden;
   /* background-color: #450920; */
+  background-color: brown;
 }
 
 /* nav bar Selesai*/
@@ -104,9 +104,10 @@ nav .menu-img {
   position: relative;
   padding: 300px 10px;
   width: 100%;
+  background-color: #7b2cbf;
   height: 776px;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-image: url(./asset/bgHome.jpg);
   border-bottom: 5px solid black;
 }
@@ -127,7 +128,7 @@ nav .menu-img {
   z-index: 1;
   color: #450920;
   margin: 10px 0px;
-  font-size: clamp(16px, 5vw, 48px); /* Minimal 16px, ideal 5vw, maksimal 48px */
+  font-size: clamp(25px, 5vw, 48px); /* Minimal 16px, ideal 5vw, maksimal 48px */
 }
 
 /* page2 */
@@ -196,7 +197,6 @@ nav .menu-img {
 }
 
 .sub-container3 .wrap-card {
-  /* width: 100%; */
   padding: 100px 0px;
   display: flex;
   justify-content: center;
@@ -566,12 +566,13 @@ iframe {
 @media only screen and (max-width: 610px) {
   nav {
     height: 70px;
-    width: 610px;
+    max-width: 500px;
     flex-wrap: wrap;
     justify-content: center;
     transition: 1s ease;
   }
   nav h1 {
+    margin: auto;
     padding: 10px 0px;
     font-size: 30px;
   }
@@ -629,9 +630,6 @@ iframe {
   .sub-container1 h1 {
     font-size: 50px;
   }
-  .sub-container1 p {
-    font-size: 30px;
-  }
 
   /* page1 selesai */
 
@@ -645,7 +643,11 @@ iframe {
   }
   .sub-container2 .wrap2 {
     width: 430px;
-    margin-right: 25px;
+    margin-right: 15px;
+    gap: 10px;
+    p {
+      font-size: 20px;
+    }
   }
   .sub-container2 img {
     margin: 65px 0px;
@@ -660,16 +662,19 @@ iframe {
 
   /* page 3 */
   .sub-container3 .wrap-card {
-    gap: 30px;
-    width: 600px;
+    gap: 10px;
+    width: 100%;
     overflow: hidden;
+    h3 {
+      font-size: 20px;
+    }
   }
 
   .wrap-card .card1 {
-    width: 250px;
+    width: 200px;
   }
   .wrap-card .card2 {
-    width: 250px;
+    width: 200px;
   }
 
   /* page 4 */
