@@ -95,7 +95,7 @@ nav .menu-img {
 
 .container {
   /* background-color: #450920; */
-  background-color: brown;
+  /* background-color: brown; */
 }
 
 /* nav bar Selesai*/
@@ -128,7 +128,7 @@ nav .menu-img {
   z-index: 1;
   color: #450920;
   margin: 10px 0px;
-  font-size: clamp(25px, 5vw, 48px); /* Minimal 16px, ideal 5vw, maksimal 48px */
+  font-size: clamp(20px, 3vw, 48px); /* Minimal 16px, ideal 5vw, maksimal 48px */
 }
 
 /* page2 */
@@ -616,6 +616,7 @@ iframe {
   .sub-container1 {
     background-repeat: no-repeat;
     height: 700px;
+    width: 100%;
     padding: 300px 0px;
     background-size: auto;
     background-size: 100vw 101vh;
