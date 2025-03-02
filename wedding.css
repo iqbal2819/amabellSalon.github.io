@@ -358,14 +358,20 @@ ul::-webkit-scrollbar-track {
   #contentPopup1 {
     display: none;
     position: fixed;
-    top: 80px !important;
+    top: 95px !important;
     left: 0;
-    width: 600px;
+    width: 400px;
     height: 600px;
     h1 {
       margin-left: 60px;
     }
+    .content {
+      width: 70%;
+    }
   }
+}
+.content-popup > img {
+  width: 30%;
 }
 /* HP max witdh 610px */
 
