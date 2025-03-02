@@ -680,7 +680,7 @@ iframe {
 
   /* page 4 */
   .sub-container4 {
-    height: 1000px;
+    height: auto;
     overflow: hidden;
   }
   .sub-container4 .wrap {
@@ -696,17 +696,18 @@ iframe {
     width: 100%;
     overflow: hidden;
     height: auto;
-    border: 3px solid black;
-    padding: 50px 0px;
+    padding: 60px 0px;
   }
 
   .ig,
   .fb,
   .tiktok {
+    gap: 0px;
     width: 400px;
     margin-bottom: 10px;
     img {
       left: 1.5em;
+      margin-right: 50px;
     }
     a {
       font-size: 20px;
