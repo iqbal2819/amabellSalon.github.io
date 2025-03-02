@@ -346,7 +346,7 @@ nav .menu-img {
   justify-content: center;
   width: 100%;
   height: auto;
-  padding: 20px;
+  /* padding: 20px; */
   gap: 20px;
   align-items: center;
 }
@@ -619,7 +619,7 @@ iframe {
     width: 100%;
     padding: 300px 0px;
     background-size: auto;
-    background-size: 100vw 101vh;
+    background-size: 100% 100%;
   }
   .sub-container1 .wrap1 {
     backdrop-filter: blur(10px);
@@ -652,7 +652,7 @@ iframe {
   }
   .sub-container2 img {
     margin: 65px 0px;
-    width: 100px;
+    width: 60px;
     height: 500px;
     object-fit: cover;
     border: 1px solid black;
@@ -680,22 +680,40 @@ iframe {
 
   /* page 4 */
   .sub-container4 {
-    height: auto;
-    overflow: hidden;
+    height: 1000px;
+    /* overflow: hidden; */
   }
   .sub-container4 .wrap {
-    padding: 10px;
-    width: 600px;
-    height: auto;
+    padding: 0px;
+    border: 3px solid red;
+    width: 100%;
+    height: max-content;
     justify-content: center;
     flex-direction: column;
     gap: 0;
     flex-direction: column-reverse;
   }
-  iframe {
-    margin: 20px 0px;
+  .wrap-medsos {
+    border: 3px solid black;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .ig,
+  .fb,
+  .tiktok {
     width: 400px;
-    height: 400px;
+  }
+
+  .alamat {
+    margin: 0;
+    position: relative;
+  }
+  iframe {
+    /* margin: 20px 0px; */
+    width: 350px;
+    height: 350px;
   }
 }
 @keyframes geserAtas {
